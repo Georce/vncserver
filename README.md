@@ -5,5 +5,5 @@ VNC of Centos6.6
 You can launch the image using the docker command line,
 
 ```bash
-docker run -d --name=vnc -p 5900:5900 georce/vncserver
+docker run -d --name=vnc -p 5900:15900 georce/vncserver
 ```
