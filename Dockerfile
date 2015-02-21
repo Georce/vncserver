@@ -1,5 +1,5 @@
 #version 1.0
-FROM centos:centos6
+FROM centos:centos6.6
 MAINTAINER zjl "atiger77@126.com"
 
 RUN rpm -ivh http://mirrors.aliyun.com/epel/6/x86_64/epel-release-6-8.noarch.rpm
