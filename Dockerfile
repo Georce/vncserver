@@ -7,6 +7,6 @@ RUN rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1
 RUN yum groupinstall -y xfce
 RUN yum install -y tigervnc-server openssh openssh-server openssh-clients && yum clean all
 ADD run.sh /run.sh
-RUN   /bin/echo 'root:aaaaaa' |chpasswd
+RUN chmod 755 /run.sh && /bin/echo 'root:aaaaaa' |chpasswd
 EXPOSE 5900
 CMD ["/run.sh"]
