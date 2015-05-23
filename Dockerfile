@@ -1,5 +1,5 @@
 #version 1.1
-FROM centos:centos6.6
+FROM index.alauda.cn/dockerlibrary/centos:centos6.6
 MAINTAINER wujian@wujian360.cn
 
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
