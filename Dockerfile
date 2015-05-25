@@ -1,6 +1,6 @@
 #version 1.1
 FROM index.alauda.cn/dockerlibrary/centos:centos6.6
-MAINTAINER wujian@wujian360.cn
+MAINTAINER please don't change to yourself
 
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
@@ -9,4 +9,5 @@ RUN yum install -y tigervnc-server openssh openssh-server openssh-clients && yum
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh && /bin/echo 'root:aaaaaa' |chpasswd
 EXPOSE 5900
+RUN \cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 CMD ["/run.sh"]
