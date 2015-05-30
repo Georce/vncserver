@@ -8,6 +8,6 @@ RUN yum groupinstall -y xfce
 RUN yum install -y tigervnc-server openssh openssh-server openssh-clients && yum clean all
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh && /bin/echo 'root:aaaaaa' |chpasswd
-EXPOSE 5900
+EXPOSE 15900
 RUN \cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 CMD ["/run.sh"]
